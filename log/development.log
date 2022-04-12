@@ -8,3 +8,129 @@ Started GET "/" for ::1 at 2015-11-16 16:12:00 -0600
 Processing by Rails::WelcomeController#index as HTML
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
 Completed 200 OK in 48ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from <top (required)> at /Users/amna/Development/code/phase-three/rails-hello-world-lab/config/environment.rb:5)
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from <top (required)> at /Users/amna/Development/code/phase-three/rails-hello-world-lab/config/environment.rb:5)
+Started GET "/hello_world" for ::1 at 2022-04-12 16:53:09 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticController#hello_world as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1589)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  
+json (1.8.6) lib/json/common.rb:155:in `initialize'
+json (1.8.6) lib/json/common.rb:155:in `new'
+json (1.8.6) lib/json/common.rb:155:in `parse'
+activesupport (7.0.2.3) lib/active_support/json/decoding.rb:23:in `decode'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/cookies.rb:547:in `load'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/cookies.rb:583:in `deserialize'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/cookies.rb:672:in `parse'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/cookies.rb:486:in `[]'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/session/cookie_store.rb:114:in `get_cookie'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/session/cookie_store.rb:89:in `block (2 levels) in unpacked_cookie_data'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/session/abstract_store.rb:53:in `stale_session_check!'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/session/cookie_store.rb:88:in `block in unpacked_cookie_data'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch_header'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/session/cookie_store.rb:87:in `unpacked_cookie_data'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/session/cookie_store.rb:81:in `block in extract_session_id'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/session/abstract_store.rb:53:in `stale_session_check!'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/session/cookie_store.rb:80:in `extract_session_id'
+actionpack (7.0.2.3) lib/action_dispatch/request/session.rb:65:in `block in id'
+actionpack (7.0.2.3) lib/action_dispatch/request/session.rb:64:in `fetch'
+actionpack (7.0.2.3) lib/action_dispatch/request/session.rb:64:in `id'
+actionpack (7.0.2.3) lib/action_dispatch/request/session.rb:84:in `id'
+rack (2.2.3) lib/rack/session/abstract/id.rb:329:in `current_session_id'
+rack (2.2.3) lib/rack/session/abstract/id.rb:335:in `session_exists?'
+actionpack (7.0.2.3) lib/action_dispatch/request/session.rb:223:in `exists?'
+actionpack (7.0.2.3) lib/action_dispatch/request/session.rb:246:in `load_for_read!'
+actionpack (7.0.2.3) lib/action_dispatch/request/session.rb:111:in `[]'
+turbolinks (5.2.1) lib/turbolinks/redirection.rb:44:in `set_turbolinks_location_header_from_session'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+actiontext (7.0.2.3) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.2.3) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.2.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.2.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.2.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
